@@ -18,3 +18,19 @@ def __init__(self):
     self.game_over = False
 
     self.reset_game()
+    
+class Player:
+    def __init__(self, x, y, assets):
+        self.x = x
+        self.y = y
+
+        self.speed = app.PLAYER_SPEED
+        self.animations = assets["player"]
+        self.state = "idle"
+        self.frame_index = 0
+        self.animation_timer = 0
+        self.animation_speed = 8
+
+        self.image = self.animations[self.state][self.frame_index]
+        self.rect = self.image.get_rect(center=(self.x, self.y))
+        self.facing_left = False
