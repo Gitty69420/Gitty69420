@@ -13,7 +13,7 @@ def __init__(self):
     self.background = self.create_random_background(
         app.WIDTH, app.HEIGHT, self.assets["floor_tiles"]
     )
-
+hello
     self.running = True
     self.game_over = False
 
